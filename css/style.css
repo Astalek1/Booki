@@ -13,10 +13,44 @@
     color: var(--main-color);
 }
 
+
 body {
     display: flex;
     justify-content: center;
 }
+
+/******* header *********/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    max-width: 1140px;
+    height: 79px;
+}
+
+header img{     /*taille du logo booki ajuster en fonction des valeurs de la maquette */
+    width: 61.09px;
+    height: 19px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width:34px;
+    height: 35px;
+    padding: 50px 50px;
+}
+
+nav ul li{
+    margin-left: 55px; /* espace entre les éléments de la liste (corespond au gap de la maquette)*/
+}
+
+nav ul li:hover{
+    color:#0065FC;
+}
+
+ /*******************/
 
 .main-container {
     width: 100%;
