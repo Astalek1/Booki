@@ -52,6 +52,78 @@ nav ul li:hover{
 
  /*******************/
 
+.info{
+    width: 1340px;
+    height: 281px;
+    gap:35px;
+}
+/*********** barre de recherche ***********/
+form{
+    border: 1px ;
+    width: 377px;
+    height: 49px;
+    display: flex;
+
+ }
+
+form .fa-solid {
+    border: 1px ;
+    width: 50px;
+    height: 49px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    justify-content: center; /* centre l'icone horizontalement*/
+    align-items: center; /* centre l'icone verticalement*/
+    background-color: #F2F2F2;
+ }
+
+form input{
+    border:none;
+    display:flex;
+    font-weight: 700;
+    font-size: 15px; /* font size de 15 au lieu de 18*/
+    line-height: 21.13px;
+    text-align:center;
+    
+ }
+
+/*boutton rechercher*/
+form button{
+    display:flex;
+    justify-content:center;
+    text-align: center;
+    border:none;
+    cursor:pointer;
+    background-color: #0065FC;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 132px;
+    height: 49px;
+ }
+
+
+form button span{ 
+    display: flex;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 49px; /* Assure un centrage vertical parfait */ 
+}
+
+form button .button-icone{
+    width:49px;
+    height:49px;
+    border-radius: 15px;
+    background-color: #0065FC;
+    color: #FFFFFF;
+    line-height: 49px;
+    display: none;
+}
+
+/******************************************/
+
+
 .main-container {
     width: 100%;
     max-width: 1440px;
@@ -198,4 +270,20 @@ a {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
-}
+
+    /* barre de recherche*/
+
+    form button{
+        background:none;
+        justify-content:left ; /*permet d'ajuster le boutton loupe sur la gauche*/
+        
+    }
+
+     form button .button-text {
+        display: none; /* Masquer le texte sur les petits écrans */
+    }
+
+
+    form button .button-icone {
+        display: inline; /* Afficher l'icône sur les petits écrans */
+    }
