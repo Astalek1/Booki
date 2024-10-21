@@ -22,10 +22,9 @@ body {
 /******* header *********/
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
-    
-    max-width: 1140px;
+    max-width: 1440px;
     height: 79px;
 }
 
@@ -34,19 +33,15 @@ header img{     /*taille du logo booki ajuster en fonction des valeurs de la maq
     height: 19px;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     list-style: none;
     width:34px;
-    height: 35px;
-    padding: 50px 50px;
+    padding: 200px;
+   gap:55px;
 }
 
-nav ul li{
-    margin-left: 55px; /* espace entre les éléments de la liste (corespond au gap de la maquette)*/
-}
-
-nav ul li:hover{
+header nav ul li:hover{
     color:#0065FC;
 }
 
@@ -122,6 +117,62 @@ form button .button-icone{
 }
 
 /******************************************/
+
+/*************Filtres*************/
+
+.section-filtres{
+    display:flex;
+    justify-content:space-between;
+    width: 758px;
+    height: 50px;
+    margin-top:25px; /*mage temporaire entre la barre et les filtres*/
+    
+
+}
+
+.section-filtres :hover{
+    background-color:#BEEBFF;
+}
+
+.titre-filtres {
+    width: 54px;
+    height: 21px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.section-filtres:hover .titre-filtres{
+    background-color: #FFFFFF;
+}
+
+.filtres{
+    display:flex;
+    align-items: baseline; /*aligne le logo et le text*/
+    width: auto;
+    height:50px;
+    border-radius:25px;
+    border: 2px solid #D9D9D9; 
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 15px;
+    gap:10px;
+}
+
+
+.filtres p{
+    font-weight: 700;
+}
+
+.logo-filtres{
+    display:flex;
+    text-align: center;
+    width:22px;
+    height:22px;
+    
+}
+
+
+/*******************************************/
 
 
 .main-container {
