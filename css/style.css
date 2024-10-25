@@ -56,8 +56,7 @@ header nav ul li:hover{
 
 .info{
     width: 1340px;
-    height: 300px;
-    gap:35px;
+    height: 280px;
 }
 
 h1{
@@ -268,6 +267,7 @@ a {
     flex-direction: row ;
     flex-wrap: wrap; /*pour faire passer les élément ala ligne automatiquement*/
     gap:30px;
+    margin-top:30px;
 }
 
 .hebergements-cards .card{
@@ -293,6 +293,10 @@ a {
     font-size: 18px;
     font-weight: 700;
     margin:0;
+}
+
+.txt-title{
+    font-weight: 700;
 }
 
 /****** Populaires ***********/
@@ -340,7 +344,45 @@ a {
     margin-bottom: 5px;
 }
 
+/************ Activités*****************/
 
+.section-activités .section-title{
+    margin-bottom:20px;
+    margin-left:10px;
+}
+
+.section-activités{
+    margin-top:30px;
+    border-radius: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.section-cards{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+.section-activités .card{
+    width: 297px;
+    height: 439px;
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    padding: 0%;
+}
+
+
+
+.section-activités img{
+    width:297px;
+    height:380px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.section-cards .card-title{
+    margin-left:15px;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
