@@ -15,112 +15,122 @@
 
 
 body {
-    display: flex;
-    justify-content: center;
     max-width: 1440px;
-    margin:auto;
+    margin: auto;
 }
 
 
 /******* header *********/
-header{
+header {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-    height: 79px;
+
 }
 
-header img{     /*taille du logo booki ajuster en fonction des valeurs de la maquette */
-    width: 61.09px;
-    height: 19px;
+header img {
+    /*taille du logo booki ajuster en fonction des valeurs de la maquette */
+    width: 5%;
+    height: 20px;
+}
+
+header nav {
+    width: 30%;
 }
 
 header nav ul {
     display: flex;
+    text-align: center;
+    justify-content: flex-end;
     list-style: none;
-    width:34px;
-    margin-right:200px;
-    gap:55px;
+    width: 90%;
+    gap: 70px;
 }
 
-header  nav ul li{
-    padding-top:5px ;
+header nav ul li {
+    /* a voir si je garde en auto pour le responsive vou si cela ne sert a rien*/
+    width: auto;
+    padding-top: 20px;
+    border-top: 2px solid white;
 }
 
-header nav ul li:hover{
-    color:#0065FC;
+header nav ul li:hover {
+    color: #0065FC;
     border-top: 2px solid;
 }
 
- /*******************/
+/*******************/
 
-.info{
+.info {
     width: 1340px;
     height: 280px;
 }
 
-h1{
-    font-size: 22px;
-   
+h1 {
+    font-size: 20px;
 }
 
 /*********** barre de recherche ***********/
-form{
-    border: 1px ;
+form {
+    border: 1px;
     width: 377px;
     height: 49px;
     display: flex;
 
- }
+}
 
 form .fa-solid {
-    border: 1px ;
+    border: 1px;
     width: 50px;
     height: 49px;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     display: flex;
-    justify-content: center; /* centre l'icone horizontalement*/
-    align-items: center; /* centre l'icone verticalement*/
+    /* centre l'icone horizontalement*/
+    justify-content: center;
+    /* centre l'icone verticalement*/
+    align-items: center;
     background-color: #F2F2F2;
- }
+}
 
-form input{
-    border:none;
-    display:flex;
+form input {
+    border: none;
+    display: flex;
     font-weight: 700;
-    font-size: 15px; /* font size de 15 au lieu de 18*/
+    font-size: 15px;
+    /* font size de 15 au lieu de 18*/
     line-height: 21.13px;
-    text-align:center;
-    
- }
+    text-align: center;
+
+}
 
 /*boutton rechercher*/
-form button{
-    display:flex;
-    justify-content:center;
+form button {
+    display: flex;
+    justify-content: center;
     text-align: center;
-    border:none;
-    cursor:pointer;
+    border: none;
+    cursor: pointer;
     background-color: #0065FC;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     width: 132px;
     height: 49px;
- }
+}
 
 
-form button span{ 
+form button span {
     display: flex;
     color: #FFFFFF;
     font-weight: 700;
     font-size: 18px;
-    line-height: 49px; /* Assure un centrage vertical parfait */ 
+    /* Assure un centrage vertical parfait */
+    line-height: 49px;
 }
 
-form button .button-icone{
-    width:49px;
-    height:49px;
+form button .button-icone {
+    width: 49px;
+    height: 49px;
     border-radius: 15px;
     background-color: #0065FC;
     color: #FFFFFF;
@@ -132,17 +142,17 @@ form button .button-icone{
 
 /*************Filtres*************/
 
-.section-filtres{
-    display:flex;
-    justify-content:space-between;
+.section-filtres {
+    display: flex;
+    justify-content: space-between;
     width: 758px;
     height: 50px;
-    margin-top:25px; /*mage temporaire entre la barre et les filtres*/
-
+    /*marge temporaire entre la barre et les filtres*/
+    margin-top: 25px;
 }
 
-.section-filtres :hover{
-    background-color:#BEEBFF;
+.section-filtres :hover {
+    background-color: #BEEBFF;
 }
 
 .titre-filtres {
@@ -152,53 +162,49 @@ form button .button-icone{
     font-size: 18px;
 }
 
-.section-filtres:hover .titre-filtres{
+.section-filtres:hover .titre-filtres {
     background-color: #FFFFFF;
 }
 
-.filtres{
-    display:flex;
-    align-items: baseline; /*aligne le logo et le text*/
+.filtres {
+    display: flex;
+    /*aligne le logo et le text*/
+    align-items: center;
     width: auto;
-    height:50px;
-    border-radius:25px;
-    border: 2px solid #D9D9D9; 
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid #D9D9D9;
     cursor: pointer;
     padding-left: 10px;
     padding-right: 15px;
-    gap:10px;
+    gap: 10px;
 }
 
 
-.filtres p{
+.filtres span {
     font-weight: 700;
 }
 
-.logo-filtres{
-    display:flex;
-    text-align: center;
-    width:22px;
-    height:22px;
-    
+.logo-filtres {
+    width: 22px;
+    height: 22px;
+
 }
 
 /**************icone de phrase**************/
 
 
-.info-icone{
-    color:white;
+.info-icone {
+    color: white;
     background-color: #0065FC;
     border-radius: 50%;
     border: 1px solid #D9D9D9;
-    outline: 1px solid #D9D9D9; /*simule une bordure*/
-    outline-offset: -1px;         /*déplace la bordure vers l'interieur. a voir en motorat l'interet de ces 2 fonction*/
-    width:auto;
-    height: 24px;
-    display:flex;
-    align-items: center;
-    justify-content:center;
-    font-size:24px;
-    
+    /*simule une bordure*/
+    outline: 1px solid #D9D9D9;
+    /*déplace la bordure vers l'interieur. a voir en motorat l'interet de ces 2 fonction*/
+    outline-offset: -1px;
+    font-size: 24px;
+
 }
 
 
@@ -263,42 +269,45 @@ a {
     width: 65%;
 }
 
-.hebergements-cards{
-    display:flex;
-    flex-direction: row ;
-    flex-wrap: wrap; /*pour faire passer les élément ala ligne automatiquement*/
-    gap:30px;
-    margin-top:30px;
+.hebergements-cards {
+    display: flex;
+    flex-direction: row;
+
+    /*pour faire passer les élément a la ligne automatiquement*/
+    flex-wrap: wrap;
+
+    gap: 30px;
+    margin-top: 30px;
 }
 
-.hebergements-cards .card{
+.hebergements-cards .card {
     width: 240px;
-    height:190px;
+    height: 190px;
     border-radius: 20px;
-    padding-bottom:15px;
-    gap:4px;
+    padding-bottom: 15px;
+    gap: 4px;
 }
 
-.hebergements-cards .card-content{
-    line-height: 10px; /*rapproche le texte des cartes*/  
+.hebergements-cards .card-content {
+    /*rapproche le texte des cartes*/
+    line-height: 10px;
+
+    padding-left: 5px;
 }
 
-.hebergements-cards img{
+.hebergements-cards img {
     width: 100%;
-    height:114px;
+    height: 114px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-.txt-afficher-plus{
+.txt-afficher-plus {
     font-size: 18px;
     font-weight: 700;
-    margin:0;
+    margin: 0;
 }
 
-.txt-title{
-    font-weight: 700;
-}
 
 /****** Populaires ***********/
 .populaires {
@@ -348,25 +357,25 @@ a {
 /************ Activités*****************/
 
 
-.section-activités .section-title{
-    margin-bottom:20px;
-    margin-left:10px;
+.section-activités .section-title {
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
 
-.section-activités{
-    margin-top:30px;
+.section-activités {
+    margin-top: 30px;
     border-radius: 20px;
     padding: 15px;
     box-sizing: border-box;
 }
 
-.section-cards{
-    display:flex;
+.section-cards {
+    display: flex;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
 }
 
-.section-activités .card{
+.section-activités .card {
     width: 297px;
     height: 439px;
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
@@ -375,25 +384,30 @@ a {
 
 
 
-.section-activités img{
-    width:297px;
-    height:380px;
+.section-activités img {
+    width: 297px;
+    height: 380px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-.section-cards .card-title{
-    margin-left:15px;
+.section-cards .card-title {
+    margin-left: 15px;
 }
+
 /*************Footer***************/
 
-.section-footer{
-    margin-top:50px;
+.section-footer {
+    margin-top: 50px;
     background-color: #F2F2F2;
-    display:flex;
+    display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
     padding: 10px 20% 20px 20px;
+}
+
+.txt-title {
+    font-weight: 700;
 }
 
 .section-footer .txt-title {
@@ -446,17 +460,20 @@ a {
 
     /* barre de recherche*/
 
-    form button{
-        background:none;
-        justify-content:left ; /*permet d'ajuster le boutton loupe sur la gauche*/
-        
+    form button {
+        background: none;
+        justify-content: left;
+        /*permet d'ajuster le boutton loupe sur la gauche*/
+
     }
 
-     form button .button-text {
-        display: none; /* Masquer le texte sur les petits écrans */
+    form button .button-text {
+        display: none;
+        /* Masquer le texte sur les petits écrans */
     }
 
     form button .button-icone {
-        display: inline; /* Afficher l'icône sur les petits écrans */
+        display: inline;
+        /* Afficher l'icône sur les petits écrans */
     }
 }
