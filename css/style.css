@@ -20,50 +20,52 @@ body {
 }
 
 
-/******* header *********/
+/************** header *******************/
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
+    width: 100%;
 }
 
 header img {
     /*taille du logo booki ajuster en fonction des valeurs de la maquette */
-    width: auto;
-    height: 20px;
+    width: 5%;
+    height: auto;
 }
 
 header nav {
-    width: 30%;
-}
-
-header nav ul {
+    width: 100%;
     display: flex;
-    text-align: center;
     justify-content: flex-end;
-    list-style: none;
-    width: 90%;
-    gap: 70px;
 }
 
-header nav ul li {
-    /* a voir si je garde en auto pour le responsive vou si cela ne sert a rien*/
-    width: auto;
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+
+}
+
+header ul li {
     padding-top: 20px;
     border-top: 2px solid white;
 }
 
-header nav ul li:hover {
+header ul li:hover {
     color: #0065FC;
     border-top: 2px solid;
 }
 
-/*******************/
+/******************* zone info*********/
 
 .info {
-    width: 1340px;
-    height: 280px;
+    width: 100%;
+    height: auto;
+}
+
+.info-titre {
+    width: 100%;
 }
 
 h1 {
@@ -73,15 +75,15 @@ h1 {
 /*********** barre de recherche ***********/
 form {
     border: 1px;
-    width: 377px;
+    width: 100%;
     height: 49px;
     display: flex;
-    border: 1px solid #F2F2F2;
     border-radius: 15px;
+
 }
 
 form .fa-solid {
-    width: 50px;
+    width: 5%;
     height: 49px;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -95,15 +97,16 @@ form .fa-solid {
 }
 
 form input {
-    border: none;
     display: flex;
     font-weight: 700;
     font-size: 15px;
     /* font size de 15 au lieu de 18*/
-    line-height: 21.13px;
     text-align: center;
+    border: 1px solid #F2F2F2;
+    width: 15%;
 
 }
+
 
 /*boutton rechercher*/
 form button {
@@ -115,7 +118,7 @@ form button {
     background-color: #0065FC;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    width: 132px;
+    width: 10%;
     height: 49px;
 }
 
@@ -130,34 +133,39 @@ form button span {
 }
 
 form button .button-icone {
-    width: 49px;
+    width: 100%;
     height: 49px;
-    border-radius: 15px;
+    border-radius: 15px 16px 15px 16px;
     background-color: #0065FC;
     color: #FFFFFF;
     line-height: 49px;
     display: none;
 }
 
-/******************************************/
-
 /*************Filtres*************/
 
 .section-filtres {
     display: flex;
-    justify-content: space-between;
-    width: 50%;
-    height: 50px;
+    height: auto;
     /*marge temporaire entre la barre et les filtres*/
     margin-top: 25px;
+
 }
 
-.section-filtres :hover {
+.section-filtres .div-filtres {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.section-filtres .div-filtres :hover {
     background-color: #BEEBFF;
 }
 
 .titre-filtres {
-    width: 10%;
+    width: 5%;
     height: 21px;
     font-weight: 700;
     font-size: 18px;
@@ -167,18 +175,18 @@ form button .button-icone {
     background-color: #FFFFFF;
 }
 
+
 .filtres {
     display: flex;
     /*aligne le logo et le text*/
     align-items: center;
     width: auto;
-    height: 50px;
     border-radius: 25px;
     border: 2px solid #D9D9D9;
     cursor: pointer;
     padding-left: 10px;
     padding-right: 15px;
-    gap: 10px;
+
 }
 
 
@@ -192,7 +200,16 @@ form button .button-icone {
 
 }
 
-/**************icone de phrase**************/
+/**************disponibilités**************/
+
+.info .disponibilites {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0 10px 0;
+}
 
 
 .info-icone {
@@ -205,17 +222,17 @@ form button .button-icone {
     /*déplace la bordure vers l'interieur. a voir en motorat l'interet de ces 2 fonction*/
     outline-offset: -1px;
     font-size: 24px;
-
+    width: 24px;
+    height: 24px;
 }
 
 
-/*******************************************/
+/********************général***********************/
 
 
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
     box-sizing: border-box;
 }
 
@@ -273,7 +290,6 @@ a {
 .hebergements-cards {
     display: flex;
     flex-direction: row;
-
     /*pour faire passer les élément a la ligne automatiquement*/
     flex-wrap: wrap;
     gap: 30px;
@@ -292,7 +308,6 @@ a {
 .hebergements-cards .card-content {
     /*rapproche le texte des cartes*/
     line-height: 10px;
-
     padding-left: 5px;
 }
 
@@ -368,6 +383,7 @@ a {
     border-radius: 20px;
     padding: 15px;
     box-sizing: border-box;
+
 }
 
 .section-cards {
@@ -376,7 +392,8 @@ a {
 }
 
 .section-cards .card {
-    width: 100%;
+    width: 90%;
+    cursor: pointer;
 }
 
 .section-activités .card {
@@ -425,15 +442,30 @@ a {
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
 
+    /*****************header***************************/
+    header img {
+        width: 8%;
+        height: auto;
+    }
+
+
+    /************barre de recherche***********/
+    form .fa-solid {
+        width: 7%;
+    }
+
+    form input {
+        width: 20%;
+    }
+
+    form button {
+        width: 12%;
+    }
+
     /***********filtres***********/
 
     .section-filtres {
-        display: block;
-    }
-
-    .titre-filtres {
-        /* Espace entre le titre et les filtres */
-        margin-bottom: 10px;
+        width: 100%;
     }
 
     /* Maintenir les filtres sur une seule ligne */
@@ -443,8 +475,12 @@ a {
         margin-right: 5px;
     }
 
+    .titre-filtres {
+        margin-right: 20px;
+    }
+
     p .info-icone {
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
     /**************************/
@@ -483,7 +519,7 @@ a {
     /***********activités********/
 
     .section-activités {
-        margin: none;
+        margin: 0;
     }
 
     .section-cards .card {
@@ -499,22 +535,266 @@ a {
 @media (max-width: 767.98px) {
     /* ... */
 
-    /* barre de recherche*/
+    /********************header*******************/
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
 
-    form button {
-        background: none;
-        justify-content: left;
-        /*permet d'ajuster le boutton loupe sur la gauche*/
+    header img {
+        width: 15%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    header ul {
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 0;
+        font-size: 19px;
 
     }
 
-    form button .button-text {
-        display: none;
-        /* Masquer le texte sur les petits écrans */
+    header ul li {
+        flex-grow: 1;
+        border-top: none;
+        border-bottom: 2px solid white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    header ul li:hover {
+        border-top: none;
+        border-bottom: 2px solid;
+    }
+
+    /******************info************/
+
+
+
+    .info .info-titre {
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    /*********** barre de recherche**************/
+
+    form {
+        width: 100%;
+        height: auto;
+    }
+
+    form .fa-solid {
+        width: 20%;
+        height: 85px;
+        font-size: 2.5em;
+
+    }
+
+    form input {
+        width: 100%;
+        height: 80px;
+
+    }
+
+    form button {
+        width: 13%;
+        height: 85px;
+        background: none;
+        position: relative;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
     }
 
     form button .button-icone {
-        display: inline;
-        /* Afficher l'icône sur les petits écrans */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
     }
+
+    /*********************filtres****************/
+    .section-filtres {
+        width: 100%;
+        margin-top: 100px;
+        box-sizing: border-box;
+        display: block;
+    }
+
+    .titre-filtres {
+        font-size: 200%;
+        margin-bottom: 50px;
+    }
+
+    .section-filtres .div-filtres {
+        width: 100%;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        gap: 25px;
+    }
+
+    .filtres {
+        width: 45%;
+        height: 80px;
+        /****pour géré la taille totale*/
+        box-sizing: border-box;
+        border-radius: 50px;
+
+    }
+
+    .filtres span {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 150%;
+        gap: 10px;
+    }
+
+    /*********************disponibilités************/
+
+    .info .disponibilites {
+        font-size: 35px;
+    }
+
+    .info-icone {
+        font-size: 40px;
+        width: 40px;
+        height: 40px;
+    }
+
+    /**************sections********************/
+    /********populaires********/
+    .populaires {
+        order: 1;
+        margin-bottom: 10px;
+    }
+
+    .section-title {
+        font-size: 43px;
+    }
+
+    .populaires-title {
+        font-size: 35px;
+        margin-bottom: 50px;
+    }
+
+    .populaires-cards {
+        display: block;
+    }
+
+    .populaires-cards .card {
+        height: 240px;
+    }
+
+    .populaires-cards img {
+        width: 25%;
+        height: auto;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 35px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 25px;
+    }
+
+    .populaires-cards .card-rating {
+        font-size: 25px;
+    }
+
+
+    /*******hebergements******/
+    .hebergements {
+        order: 2;
+        background-color: transparent !important;
+    }
+
+    .hebergements .section-title {
+        font-size: 45px;
+        margin-bottom: 50px;
+    }
+
+    .hebergements-cards .card {
+        width: 100%;
+        height: 330px;
+        margin: 5px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .card-title {
+        font-size: 33px;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+    .hebergements-cards .card-content {
+        font-size: 30px;
+    }
+
+    .hebergements-cards img {
+        height: 200px;
+    }
+
+    .txt-afficher-plus {
+        padding-top: 15px;
+        font-size: 30px;
+    }
+
+    /**********activités*******/
+    .section-activités {
+        order: 3;
+        margin-top: 100px;
+    }
+
+    .section-activités .section-title {
+        font-size: 45px;
+        margin-bottom: 50px;
+    }
+
+    .section-cards {
+        display: block;
+    }
+
+    .section-cards .card {
+        width: 95%;
+        height: 330px;
+        /* Empêche l'image de déborder */
+        overflow: hidden;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    }
+
+    .section-activités img {
+        width: 100%;
+        height: 230px !important;
+    }
+
+    .section-cards .card-title {
+        margin-left: 30px;
+    }
+
+    /****************footer***********/
+
+    .section-footer {
+        display: flex;
+        flex-direction: column;
+        font-size: 30px;
+        gap: 30px;
+        padding-left: 30px;
+    }
+
+    .section-footer .txt-title {
+        font-size: 30px;
+    }
+
+
 }
