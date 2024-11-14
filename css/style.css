@@ -153,7 +153,6 @@ form button .button-icone {
 }
 
 .section-filtres .div-filtres {
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -168,6 +167,7 @@ form button .button-icone {
     width: 5%;
     font-weight: 700;
     font-size: 18px;
+    ;
 }
 
 .section-filtres:hover .titre-filtres {
@@ -319,9 +319,7 @@ a {
 .txt-afficher-plus {
     font-size: 18px;
     font-weight: 700;
-    margin: 0;
 }
-
 
 /****** Populaires ***********/
 .populaires {
