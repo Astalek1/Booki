@@ -119,13 +119,12 @@ form button {
     background-color: #0065FC;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    width: 10%;
+    width: 11%;
     height: 49px;
 }
 
 
 form button span {
-    display: flex;
     color: #FFFFFF;
     font-weight: 700;
     font-size: 18px;
@@ -157,6 +156,7 @@ form button .button-icone {
     flex-direction: row;
     justify-content: space-between;
     gap: 10px;
+    width: auto;
 }
 
 .section-filtres .div-filtres :hover {
@@ -167,7 +167,6 @@ form button .button-icone {
     width: 5%;
     font-weight: 700;
     font-size: 18px;
-    ;
 }
 
 .section-filtres:hover .titre-filtres {
@@ -271,7 +270,7 @@ a {
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .hebergements-and-populaires section {
@@ -279,6 +278,7 @@ a {
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
+
 }
 
 /****** Hebergements ***********/
@@ -286,18 +286,23 @@ a {
     width: 65%;
 }
 
+.hebergements .section-title {
+    margin-left: 20px;
+}
+
 .hebergements-cards {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     /*pour faire passer les élément a la ligne automatiquement*/
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
     margin-top: 30px;
 }
 
 .hebergements-cards .card {
-    width: 28%;
-    height: 190px;
+    width: 29%;
+    height: 207px;
     border-radius: 20px;
     padding-bottom: 15px;
     gap: 4px;
@@ -319,6 +324,7 @@ a {
 .txt-afficher-plus {
     font-size: 18px;
     font-weight: 700;
+    margin: 20px 0px 0px 20px;
 }
 
 /****** Populaires ***********/
@@ -452,6 +458,10 @@ a {
         width: 30%;
     }
 
+    header ul {
+        gap: 60px;
+    }
+
     header ul li {
         font-size: 10px;
     }
@@ -551,18 +561,21 @@ a {
         width: 100%;
     }
 
-    .hebergements-cards .card {
-        height: 110px;
-        border-radius: 15px;
+    .hebergements .section-title {
+        margin-left: 0;
+    }
 
+    .hebergements-cards .card {
+        height: 150px;
+        border-radius: 15px;
     }
 
     .hebergements-cards .card-content {
-        line-height: 0;
+        line-height: 5px;
     }
 
     .hebergements-cards .card-rating {
-        font-size: 10px;
+        font-size: 13px;
         margin-top: -10px;
         width: 40%;
     }
@@ -574,16 +587,17 @@ a {
     }
 
     .card-content .card-title {
-        font-size: 10px;
+        font-size: 14px;
         margin-top: 5px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
     .card-content .card-subtitle {
-        font-size: 8px;
+        font-size: 12px;
     }
 
     .txt-afficher-plus {
+        margin-left: 0;
         font-size: 12px;
     }
 
@@ -917,6 +931,7 @@ a {
 
     .hebergements .card-title {
         font-size: 14px;
+        margin-bottom: 0;
     }
 
     .hebergements-cards .card-subtitle {
@@ -925,11 +940,7 @@ a {
     }
 
     .hebergements .card-rating {
-        font-size: 12px;
-    }
-
-    .hebergements-cards .card-content {
-        line-height: 5px;
+        font-size: 13px;
     }
 
     .hebergements-cards img {
@@ -938,7 +949,7 @@ a {
 
     .txt-afficher-plus {
         padding-top: 5px;
-        font-size: 15px;
+        font-size: 12px;
     }
 
     /**********activités*******/
