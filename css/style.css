@@ -171,6 +171,7 @@ form button .button-icone {
     width: 5%;
     font-weight: 700;
     font-size: 18px;
+    margin-right: 10px;
 }
 
 .section-filtres:hover .titre-filtres {
