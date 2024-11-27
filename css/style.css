@@ -433,6 +433,12 @@ form button .button-icone {
     padding: 10px 20% 20px 20px;
 }
 
+
+.section-footer a {
+    display: block;
+    margin: 15px
+}
+
 .txt-title {
     font-weight: 700;
     font-size: 18px;
@@ -672,10 +678,11 @@ form button .button-icone {
     }
 
     /************footer*********/
-
     .section-footer {
         margin-top: 20px;
         padding-bottom: 0;
+        display: flex;
+
     }
 
     .section-footer .txt-title {
@@ -683,7 +690,7 @@ form button .button-icone {
         margin-bottom: 15px;
     }
 
-    .section-footer p {
+    .section-footer a {
         font-size: 10px;
         line-height: 1;
         padding: 0;
@@ -999,7 +1006,7 @@ form button .button-icone {
         font-size: 18px;
     }
 
-    .section-footer p {
+    .section-footer a {
         font-size: 15px;
     }
 }
