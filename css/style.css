@@ -143,6 +143,7 @@ form .fa-solid {
     /* centre l'icone verticalement*/
     align-items: center;
     background-color: var(--main-bg-color);
+    color: black;
 }
 
 form input {
